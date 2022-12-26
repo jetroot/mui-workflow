@@ -1,0 +1,15 @@
+name: Integration
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - run: docker build -t gybv564ffd/workflow:latest .
+    - run: echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password stdin
+    - run: docker push gybv564ffd/workflow:latest

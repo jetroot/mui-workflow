@@ -1,5 +1,5 @@
 # Release workflow
-name: Integration
+name: Release
 
 on:
   push:

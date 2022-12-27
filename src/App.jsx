@@ -13,7 +13,7 @@ const App = () => {
             }}
         >
             <Typography variant="h2" component={"h4"}>
-                Automated with Github Actions
+                Automated with Github Actions and running on docker.
             </Typography>
         </FlexBetween>
     );
